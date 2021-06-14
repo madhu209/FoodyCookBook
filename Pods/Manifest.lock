@@ -1,0 +1,28 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - MBProgressHUD (1.2.0)
+  - ReachabilitySwift (4.3.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
+  - ReachabilitySwift (~> 4.0)
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - MBProgressHUD
+    - ReachabilitySwift
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 2bdf7a9528c3684441b926b78606572ad0f013fe
+
+COCOAPODS: 1.10.1

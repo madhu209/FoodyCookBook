@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDd-YE-S5Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="vrT-Hp-u6a">
+            <objects>
+                <navigationController id="L3C-Rh-a17" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="0HQ-qC-i2b"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xfw-2J-drU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ApplicationColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="HomeBackground"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jtd-JC-ojR" kind="relationship" relationship="rootViewController" id="6vT-4r-apz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaE-JM-Fk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-482"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Iyv-PB-ho9">
+            <objects>
+                <tabBarController id="dDd-YE-S5Y" customClass="TabBarViewController" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LqU-N5-aAs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L3C-Rh-a17" kind="relationship" relationship="viewControllers" id="9xl-pD-uhY"/>
+                        <segue destination="7Zd-sa-6Ti" kind="relationship" relationship="viewControllers" id="nKe-2R-w9k"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvs-wV-8sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1923" y="-135"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="mFC-hU-Zij">
+            <objects>
+                <viewController id="Jtd-JC-ojR" customClass="HomeVC" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9PQ-ag-gw8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mba-Fb-1j3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jtd-JC-ojR" id="ua4-ib-ZmJ"/>
+                                    <outlet property="delegate" destination="Jtd-JC-ojR" id="YAB-zl-kef"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WxQ-zd-4kA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mba-Fb-1j3" firstAttribute="top" secondItem="WxQ-zd-4kA" secondAttribute="top" id="3MV-yF-77f"/>
+                            <constraint firstItem="WxQ-zd-4kA" firstAttribute="bottom" secondItem="Mba-Fb-1j3" secondAttribute="bottom" id="DuC-Em-eyE"/>
+                            <constraint firstItem="WxQ-zd-4kA" firstAttribute="trailing" secondItem="Mba-Fb-1j3" secondAttribute="trailing" id="OBz-1F-zhX"/>
+                            <constraint firstItem="Mba-Fb-1j3" firstAttribute="leading" secondItem="9PQ-ag-gw8" secondAttribute="leading" id="jF6-L3-alv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="2TA-a2-VKT"/>
+                    <connections>
+                        <outlet property="dishListTV" destination="Mba-Fb-1j3" id="Ypl-ct-W29"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGR-Jp-TRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="-482"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="fpp-LN-HnU">
+            <objects>
+                <navigationController id="7Zd-sa-6Ti" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="atJ-uF-cUe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3uy-lr-3Nn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94117647058823528" green="0.61960784313725492" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="HomeBackground"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lqe-Ud-Bvl" kind="relationship" relationship="rootViewController" id="Ycw-TS-g88"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1N-Wl-0b4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-784" y="234"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="SUV-Nm-RZd">
+            <objects>
+                <viewController id="lqe-Ud-Bvl" customClass="SearchController" customModule="FoodyCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="flM-Ib-8Zp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="yXj-O4-1Ei">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b5R-hs-Kfa"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lqe-Ud-Bvl" id="d2i-17-jpe"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GTF-VU-xyr">
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lqe-Ud-Bvl" id="21E-MG-GrB"/>
+                                    <outlet property="delegate" destination="lqe-Ud-Bvl" id="ROd-Hd-gWP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jg0-H9-RSA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jg0-H9-RSA" firstAttribute="trailing" secondItem="GTF-VU-xyr" secondAttribute="trailing" id="0xz-BG-TWj"/>
+                            <constraint firstItem="yXj-O4-1Ei" firstAttribute="leading" secondItem="jg0-H9-RSA" secondAttribute="leading" id="B3G-3R-9r3"/>
+                            <constraint firstAttribute="trailing" secondItem="yXj-O4-1Ei" secondAttribute="trailing" id="dp5-CV-j4V"/>
+                            <constraint firstItem="yXj-O4-1Ei" firstAttribute="top" secondItem="jg0-H9-RSA" secondAttribute="top" id="eOh-lq-QIx"/>
+                            <constraint firstItem="jg0-H9-RSA" firstAttribute="bottom" secondItem="GTF-VU-xyr" secondAttribute="bottom" id="gtd-JJ-Axx"/>
+                            <constraint firstItem="GTF-VU-xyr" firstAttribute="leading" secondItem="jg0-H9-RSA" secondAttribute="leading" id="oKz-0U-o4H"/>
+                            <constraint firstItem="GTF-VU-xyr" firstAttribute="top" secondItem="yXj-O4-1Ei" secondAttribute="bottom" id="oYD-e9-56s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="9fx-kG-Tde"/>
+                    <connections>
+                        <outlet property="dishListTV" destination="GTF-VU-xyr" id="bL6-BJ-lQy"/>
+                        <outlet property="searchBarObj" destination="yXj-O4-1Ei" id="5gr-7r-tPT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ZV-NB-LqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="32" height="32"/>
+        <image name="search" width="32" height="32"/>
+        <namedColor name="ApplicationColor">
+            <color red="0.94300001859664917" green="0.61900001764297485" blue="0.21899999678134918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="HomeBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
